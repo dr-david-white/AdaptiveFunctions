@@ -1,2 +1,2 @@
-# AdaptiveFunctions
-Adaptive functions in an agent-based model of an economic system
+# ABMVoting
+Research into agent based models of self regulating systems and how rules of self interest affect these

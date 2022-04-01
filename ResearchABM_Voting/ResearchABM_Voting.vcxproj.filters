@@ -24,10 +24,16 @@
     <ClInclude Include="Agent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConsumablePool.h">
+    <ClInclude Include="Marketplace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CSVWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataOutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Economy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,10 +44,16 @@
     <ClCompile Include="Agent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConsumablePool.cpp">
+    <ClCompile Include="Marketplace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ABM_economy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Economy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

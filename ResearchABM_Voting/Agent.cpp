@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "Agent.h"
-#include "ConsumablePool.h"
+#include "Marketplace.h"
 #include <iostream>     // std::cout
 #include <algorithm>    // std::max
 #include <math.h>  
@@ -40,8 +40,8 @@ Agent::Agent(bool influencer, int id) : m_id(id)
 	int r = rand() % 100;
 	float productivity = (float)r;
 	productivity /= 100;
-	productivity *= 0.2;
-	productivity += 0.8;
+	productivity *= 0.2f;
+	productivity += 0.8f;
 
 	setProductivity(min(1.0f, productivity));
 }
@@ -126,24 +126,22 @@ float Agent::consumption()
 	return m_consumption;
 }
 
-void Agent::updateSatisfaction()
+void Agent::updateSatisfaction(Marketplace* marketplace)
 {
 	float delta = 0.1f;
-	ConsumablePool& pool = ConsumablePool::getInstance();
-
 	// produce a rank value between 0 and 1 (1 = ranked top, 0 = bottom)
-	int rank = pool.getWealthRankForSelf(m_lastSalary); // 1 = top 10 = bottom
+	int rank = marketplace->getWealthRankForSelf(m_lastSalary); // 1 = top 10 = bottom
 	float satisfactionInRankStanding = (float)rank;
 
 	// https://journals.sagepub.com/doi/10.1177/0956797610362671
 
 	float nl = 1.75;
-	float i = (PRODUCT_TYPE_COUNT - rank);
+	float i = (float)(PRODUCT_TYPE_COUNT - rank);
 	float n = PRODUCT_TYPE_COUNT;
 
 	float numerator = (i - 1) - (nl * (n - i));
 	float denominator = 2 * ((i - 1) + (nl * (n - i)));
-	float SR = 0.5 + (numerator / denominator);
+	float SR = 0.5f + (numerator / denominator);
 
 	m_satisfaction = SR;
 }

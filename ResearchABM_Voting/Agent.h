@@ -1,8 +1,10 @@
 #pragma once
 
 #define PRODUCT_TYPE int
-#define PRODUCT_TYPE_COUNT 10
+#define PRODUCT_TYPE_COUNT (int)10
 #define POPULATION_SIZE 1000
+
+class Marketplace;
 
 class Agent
 {
@@ -14,7 +16,7 @@ public:
 	float			produce();
 	void			consume();
 	float			satisfaction() { return m_satisfaction; }
-	void			updateSatisfaction();
+	void			updateSatisfaction(Marketplace* marketplace);
 	float			consumption();
 	float			money() { return m_money; }
 	PRODUCT_TYPE	produceType() { return m_producerType; }
@@ -71,4 +73,37 @@ private:
 	float			m_sellingPriceDiff;
 	float			m_sales;
 };
+
+struct agentRank
+{
+	int populationSize;
+	float wealth;
+	float salary;
+	float salary_median;
+	float satisfaction;
+	float consumption;
+
+	float wealth_equality;
+	float salary_equality;
+	float satisfaction_equality;
+	float consumption_equality;
+
+	float wealth_min;
+	float salary_min;
+	float satisfaction_min;
+	float consumption_min;
+
+	float wealth_max;
+	float salary_max;
+	float satisfaction_max;
+	float consumption_max;
+
+	float sales; // sales this cycle
+	float jobMovement;
+	float sellMovement;
+	PRODUCT_TYPE type;
+};
+
+
+typedef  std::vector<agentRank> vecRank;
 

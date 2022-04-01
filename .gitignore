@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ResearchABM_Voting/Debug
+/.vs
+/ResearchABM_Voting/x64/Debug
+/x64/Debug
+/ResearchABM_Voting/stocks.csv
+/ResearchABM_Voting/salaries.csv
+/ResearchABM_Voting/producercount.csv
+/ResearchABM_Voting/prices.csv
+/ResearchABM_Voting/health.csv
+/x64/Release
+/ResearchABM_Voting/x64/Release
+/ResearchABM_Voting/stats

@@ -145,15 +145,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
-    <ClInclude Include="ConsumablePool.h" />
+    <ClInclude Include="Economy.h" />
+    <ClInclude Include="Marketplace.h" />
     <ClInclude Include="CSVWriter.h" />
+    <ClInclude Include="DataOutput.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
-    <ClCompile Include="ConsumablePool.cpp" />
+    <ClCompile Include="Economy.cpp" />
+    <ClCompile Include="Marketplace.cpp" />
     <ClCompile Include="ABM_economy.cpp" />
+    <ClCompile Include="DataOutput.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
